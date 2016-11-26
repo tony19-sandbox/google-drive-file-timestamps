@@ -1,0 +1,5 @@
+.idea
+.DS_Store
+*.iml
+*.pyc
+*_backup/
