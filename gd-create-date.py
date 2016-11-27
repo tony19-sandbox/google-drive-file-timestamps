@@ -117,7 +117,7 @@ def main():
     credentials = get_credentials()
     http = credentials.authorize(httplib2.Http())
     service = discovery.build('drive', 'v3', http=http)
-    for item in listFiles(service)[:10]:
+    for item in listFiles(service):
         downloadFile(item.get('name'), item.get('id'), item.get('createdTime'), item.get('modifiedTime'), item.get('mimeType'), service)
 
 if __name__ == '__main__':
